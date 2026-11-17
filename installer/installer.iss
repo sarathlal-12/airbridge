@@ -4,7 +4,7 @@
 ;   ISCC.exe installer\installer.iss                                                        -> Output\
 #define MyAppName "AirBridge"
 #ifndef MyAppVersion
-  #define MyAppVersion "1.0.0"
+  #define MyAppVersion "1.0.1"
 #endif
 #define MyAppPublisher "Sarath"
 #define MyAppURL "https://github.com/sarathlal-12/airbridge"
@@ -66,9 +66,9 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "AirBridge"; ValueData: """{app}\{#MyAppExeName}"""; Flags: uninsdeletevalue; Tasks: startup
 
 [Run]
-; Firewall: let iPhones reach the AirPlay engine on home (Private) networks. Remove any old copy first.
+; Firewall: let iPhones reach the AirPlay engine on any network (Windows often marks home Wi-Fi as Public). Remove any old copy first.
 Filename: "{sys}\netsh.exe"; Parameters: "advfirewall firewall delete rule name=""AirBridge AirPlay"""; Flags: runhidden; StatusMsg: "Configuring Windows Firewall..."
-Filename: "{sys}\netsh.exe"; Parameters: "advfirewall firewall add rule name=""AirBridge AirPlay"" dir=in action=allow program=""{app}\engine\AirBridgeEngine.exe"" enable=yes profile=private"; Flags: runhidden; StatusMsg: "Configuring Windows Firewall..."
+Filename: "{sys}\netsh.exe"; Parameters: "advfirewall firewall add rule name=""AirBridge AirPlay"" dir=in action=allow program=""{app}\engine\AirBridgeEngine.exe"" enable=yes profile=any"; Flags: runhidden; StatusMsg: "Configuring Windows Firewall..."
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent runasoriginaluser
 
 [UninstallRun]

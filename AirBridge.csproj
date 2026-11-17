@@ -9,7 +9,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>AirBridge</AssemblyName>
     <RootNamespace>AirBridge</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Product>AirBridge</Product>
     <Description>Play iPhone (AirPlay) and Android (Bluetooth) audio through your Windows PC.</Description>
     <ApplicationIcon>assets\app_icon.ico</ApplicationIcon>

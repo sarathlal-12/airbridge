@@ -16,7 +16,7 @@ Needs Windows 10 (version 2004) or Windows 11, 64-bit. The installer asks for ad
 ## Using it
 
 ### iPhone (AirPlay)
-1. The phone and PC must be on the same Wi-Fi, and that network must be **Private** in Windows (Settings > Network & internet > your Wi-Fi > Private).
+1. The phone and PC must be on the same Wi-Fi. It works on home Wi-Fi without internet and on a phone hotspot too.
 2. Play something, open Control Center, tap the AirPlay icon on the music card and choose **AirBridge**.
 3. The iPhone's volume buttons control AirBridge's volume. Windows' volume sets the maximum.
 
@@ -30,7 +30,8 @@ Music, podcasts, YouTube, Instagram, TikTok, Netflix and most games come through
 Bluetooth has a little more delay than AirPlay.
 
 ## Troubleshooting
-- **iPhone doesn't list AirBridge:** check the Wi-Fi is Private in Windows and both devices are on the same network. Some routers' "client isolation" or guest networks block AirPlay.
+- **iPhone doesn't list AirBridge:** check both devices are on the same network. Some routers' "client isolation" or guest networks block AirPlay. If you switched Wi-Fi, give AirBridge a few seconds to move over.
+- **On public Wi-Fi** (cafés, hotels) other people on the network can see AirBridge too. Quit it from the tray icon when you don't need it.
 - **Logs:** tray icon > **Open logs folder**.
 
 ## Building from source
