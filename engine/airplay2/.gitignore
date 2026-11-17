@@ -1,0 +1,6 @@
+# Runtime files the receiver writes into its working folder
+pairings/
+*.log
+events.bin
+__pycache__/
+*.bak

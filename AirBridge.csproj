@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- 10.0.19041 = Windows 10 2004: needed for Bluetooth audio receiving (AudioPlaybackConnection). -->
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <AssemblyName>AirBridge</AssemblyName>
+    <RootNamespace>AirBridge</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>AirBridge</Product>
+    <Description>Play iPhone (AirPlay) and Android (Bluetooth) audio through your Windows PC.</Description>
+    <ApplicationIcon>assets\app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Logging -->
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assets\app_icon.ico" LogicalName="app_icon.ico" />
+  </ItemGroup>
+
+</Project>
